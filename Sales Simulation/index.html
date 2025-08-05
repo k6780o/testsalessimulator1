@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Simulator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #1f2937;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      color: #90caf9;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .difficulty-button {
+      background-color: #4caf50;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .difficulty-button:hover {
+      background-color: #66bb6a;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sales Simulator</h1>
+    <p>Master persuasion. Sell anything. Build your bond empire.</p>
+  </header>
+
+  <div class="section">
+    <h2>Bonds</h2>
+    <div class="button-group">
+      <button class="difficulty-button" onclick="startGame('easy-bonds')">Easy Bonds</button>
+      <button class="difficulty-button" onclick="startGame('medium-bonds')">Medium Bonds</button>
+      <button class="difficulty-button" onclick="startGame('hard-bonds')">Hard Bonds</button>
+      <button class="difficulty-button" onclick="startGame('extra-hard-bonds')">Extra Hard Bonds</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Products</h2>
+    <div class="button-group">
+      <button class="difficulty-button" onclick="startGame('easy-product')">Easy Product</button>
+      <button class="difficulty-button" onclick="startGame('medium-product')">Medium Product</button>
+      <button class="difficulty-button" onclick="startGame('hard-product')">Hard Product</button>
+      <button class="difficulty-button" onclick="startGame('extra-hard-product')">Extra Hard Product</button>
+    </div>
+  </div>
+
+
+
+  <script>
+    function startGame(page) {
+      alert("Starting: " + page.replace('-', ' ').toUpperCase());
+      window.location.href = page + ".html";
+    }
+  </script>
+
+</body>
+</html>
